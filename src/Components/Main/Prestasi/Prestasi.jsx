@@ -6,10 +6,10 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
 
 //import the img ==========>
-    import img2 from '../../Assets/school.jpg'
-    import img3 from '../../Assets/school.jpg'
-    import img4 from '../../Assets/school.jpg'
-    import img5 from '../../Assets/school.jpg'
+    import img2 from '../../../Assets/school.jpg'
+    import img3 from '../../../Assets/school.jpg'
+    import img4 from '../../../Assets/school.jpg'
+    import img5 from '../../../Assets/school.jpg'
 
 const Data = [
     {

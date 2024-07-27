@@ -1,25 +1,51 @@
 import React from 'react'
-import './app.css'
-import Home from './Components/Home/Home'
-import Prestasi from './Components/Prestasi/Prestasi'
-import Offer from './Components/Offers/Offer'
-import About from './Components/About/About'
-import Blog from './Components/Blog/Blog'
-import Footer from './Components/Footer/Footer'
-import Navbar from './Components/Navbar/Navbar'
+import './App.css'
+import Home from './Components/Main/Home/Home'
+import Prestasi from './Components/Main/Prestasi/Prestasi'
+import Offer from './Components/Main/Offers/Offer'
+import About from './Components/Main/About/About'
+import Blog from './Components/Main/Blog/Blog'
+import Footer from './Components/Main/Footer/Footer'
+import Navbar from './Components/Main/Navbar/Navbar'
+import { BrowserRouter,Routes,Route, Outlet } from 'react-router-dom'
+import Login from './Components/DashboardAdmin/Login/Login'
+
 
 const App = () => {
+
     return (
         <>
-        <Navbar/>
-        <Home/>
-        <Prestasi/>
-        {/* <Offer/>
-        <About/>
-        <Blog/> */}
-        <Footer/>
+        <BrowserRouter>
+            <Routes>
+                <Route element={<WithNavbar/>}>
+                    <Route path='/' element={<Home/>}/>
+                </Route>
+                <Route path='/login' element={<Login/>}/>a
+            </Routes>
+        </BrowserRouter>
         </>
+        // <>
+        // <Navbar/>
+        // <Home/>
+        // <Prestasi/>
+        // {/* <Offer/>
+        // <About/>
+        // <Blog/> */}
+        // <Footer/>
+        // </>
     )
 }
+
+function WithNavbar(){
+    return (
+        <>
+            <Navbar/>
+            <Outlet/>
+            <Prestasi/>
+            <Footer/>
+        </>
+    );
+}
+
 
 export default App

@@ -4,6 +4,7 @@ import { FaSchool } from "react-icons/fa6";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 
+
 const Navbar = () => {
     //code to toggle/show navbar 
     const [active, setActive] = useState('navBar')
@@ -70,7 +71,7 @@ const Navbar = () => {
                                 <a href="#">Contact</a>
                             </button>
                             <button className='btn'>
-                                <a href="#">Sign Up</a>
+                                <a href="/login">Login</a>
                             </button>
                         </div>
 

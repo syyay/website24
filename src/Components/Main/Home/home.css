@@ -13,7 +13,7 @@
 
 .home {
   height: 80vh;
-  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url(../../Assets/profil24.mp4);
+  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url(../../../Assets/profil24.mp4);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
