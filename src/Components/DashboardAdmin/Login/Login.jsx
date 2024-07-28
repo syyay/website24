@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../../../Assets/bootstrap/css/bootstrap.min.css"
 import './Login.css';
 // import assetImage from "../../../Assets/image 1.jpeg"
@@ -8,6 +8,22 @@ import { FaUser, FaLock } from "react-icons/fa";
 function Login(){
     const token = localStorage.getItem("token");
     const [messageError, setMessageError] = useState();
+    useEffect(()=>{
+      if(token){
+          AxiosInstance.get('/auth/cektoken',{
+              headers:{
+                  Authorization:'Bearer '+token
+              }
+          }).then(response=>{
+              if(response.status){
+                window.location.href = "/dashboard/daftarsiswa"
+              }
+          }).catch(err=>{ 
+            return
+          })
+      }else{
+          return
+      }})
     const login = (e) => {
       e.preventDefault();
       const username = document.getElementById("username").value;
@@ -40,10 +56,12 @@ function Login(){
               <FaLock className='icon' />
             </div>
 
-            <div className="remember-forgot">
-              <label><input type='checkbox' />Remember me</label>
-              <a href='#'>Forgot Password?</a>
-            </div>
+            {
+              messageError ? 
+              <div className='mb-3'>{messageError}</div>
+              :
+              <></>
+            }
 
             <button type='submit'>Login</button>
           </form>
