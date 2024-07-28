@@ -10,6 +10,7 @@ import Navbar from './Components/Main/Navbar/Navbar'
 import { BrowserRouter,Routes,Route, Outlet } from 'react-router-dom'
 import Login from './Components/DashboardAdmin/Login/Login'
 import DaftarSiswa from './Components/DashboardAdmin/DaftarSiswa/DaftarSiswa.jsx'
+import Walas from './Components/DashboardAdmin/Walas/Walas.jsx'
 
 
 const App = () => {
@@ -22,7 +23,10 @@ const App = () => {
                     <Route path='/' element={<Home/>}/>
                 </Route>
                 <Route path='/login' element={<Login/>}/>
-                <Route path='/dashboard/daftarsiswa' element={<DaftarSiswa/>}/>
+                <Route path='/dashboard' element={<Dashboard/>}>
+                    <Route path='daftarsiswa' element={<DaftarSiswa/>}/>
+                    <Route path='walas' element={<Walas/>}/>
+                </Route>
             </Routes>
         </BrowserRouter>
         </>
@@ -47,6 +51,14 @@ function WithNavbar(){
             <Footer/>
         </>
     );
+}
+
+function Dashboard(){
+    return (
+        <>
+            <Outlet/>
+        </>
+    )
 }
 
 
