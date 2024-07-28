@@ -9,6 +9,7 @@ import Footer from './Components/Main/Footer/Footer'
 import Navbar from './Components/Main/Navbar/Navbar'
 import { BrowserRouter,Routes,Route, Outlet } from 'react-router-dom'
 import Login from './Components/DashboardAdmin/Login/Login'
+import DaftarSiswa from './Components/DashboardAdmin/DaftarSiswa/DaftarSiswa.jsx'
 
 
 const App = () => {
@@ -20,7 +21,8 @@ const App = () => {
                 <Route element={<WithNavbar/>}>
                     <Route path='/' element={<Home/>}/>
                 </Route>
-                <Route path='/login' element={<Login/>}/>a
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/dashboard/daftarsiswa' element={<DaftarSiswa/>}/>
             </Routes>
         </BrowserRouter>
         </>

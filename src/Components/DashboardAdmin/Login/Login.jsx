@@ -14,9 +14,10 @@ function Login(){
         "username":username,
         "password":password
       }).then(response=>{
-        alert("success");
-        setMessageError(null);
         console.log(response);
+        localStorage.setItem("token",response.data.token);
+        setMessageError(null);
+        window.location.href = "/dashboard/daftarsiswa" 
       }).catch(err=>{
         setMessageError(err.response.data.message)
       });
