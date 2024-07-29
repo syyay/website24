@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --PrimaryColor: hsl(26, 90%, 42%);
+    --SecondaryColor: hsl(26, 93%, 50%);
+    --gradientColor: linear-gradient(to right, hsl(35, 100%, 58%), hsl(49, 93%, 62%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(255, 255, 255);
+    --cardHover: rgb(245, 245, 255);
+    --shadowColor: rgba(0, 0, 0, 0.1);
+    --transitionDuration: 0.3s;
+    --borderRadius: 10px;
+    --cardColor : rgb(28, 27, 27);
+    --overlayColor: rgba(0, 0, 0, 0.6);
+    --shadowColor: rgba(0, 0, 0, 0.1);
+    --borderRadius: 10px;
+    --transitionDuration: 0.3s;
+}
+/* ini css eskul home */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    top: 0;
+    z-index: 1;
+}
+
+video {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+}
+
+.homeContent {
+    position: absolute;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 280px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor);
+    z-index: 2;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 4px 8px var(--shadowColor);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.textDiv {
+    margin-bottom: 1.5rem;
+    animation: slideInFromLeft 1s ease-in-out;
+
+    .homeTitle {
+        font-size: 3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--whiteColor);
+        background: var(--gradientColor);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: colorChange 3s infinite alternate;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes colorChange {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .homeContent {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .textDiv {
+        margin-bottom: 2rem;
+
+        .homeTitle {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+/* ini css eskul card */
+.main {
+    width: 100%;
+    padding: 2rem 0;
+
+    .secTitle {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .title {
+            position: relative;
+            display: inline-block;
+            color: var(--PrimaryColor);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            background: var(--gradientColor);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin: 0;
+            padding-bottom: 10px;
+            box-shadow: 0 2px 4px var(--shadowColor);
+            transition: var(--transitionDuration) ease-in-out;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 400px;
+                height: 4px;
+                background: var(--SecondaryColor);
+                margin: 10px auto 0;
+            }
+        }
+    }
+
+    .secContent {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .singleDestination {
+            width: 300px;
+            background: var(--cardBG);
+            border-radius: var(--borderRadius);
+            box-shadow: 0 4px 8px var(--shadowColor);
+            transition: var(--transitionDuration) ease;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--cardHover);
+                box-shadow: 0 8px 16px var(--shadowColor);
+                transform: translateY(-5px);
+            }
+
+            .imageDiv {
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+                border-top-left-radius: var(--borderRadius);
+                border-top-right-radius: var(--borderRadius);
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: transform var(--transitionDuration) ease;
+                }
+
+                &:hover img {
+                    transform: scale(1.1);
+                }
+            }
+
+            .cardInfo {
+                padding: 1.5rem;
+                background-color: var(--cardColor);
+
+                .destTitle {
+                    color: var(--whiteColor);
+                    font-size: 1rem;
+                    font-weight: 700;
+                    margin-bottom: 0.5rem;
+                }
+
+                .icons{
+                    margin-top: -43px;
+                    margin-left: 9rem;
+                    font-size: 1rem;
+                }
+
+                .name{
+                    margin-top: -46px;
+                    font-size: 1rem;
+                }
+
+                .fees {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.5rem 0;
+                    border-top: 1px solid var(--greyText);
+                    border-bottom: 1px solid var(--greyText);
+                    margin: 1rem 0;
+
+                    .grade {
+                        color: var(--PrimaryColor);
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+
+                        small {
+                            text-align: center;
+                            background: var(--gradientColor);
+                            border-radius: 1rem;
+                            color: var(--whiteColor);
+                            padding: 2px 8px;
+                            font-size: 0.75rem;
+                            margin-left: 0.5rem;
+                        }
+                    }
+
+                    .price {
+                        font-size: 1.5rem;
+                        color: var(--SecondaryColor);
+                        font-weight: 700;
+                    }
+                }
+
+                .desc {
+                    font-size: 1rem;
+                    font-style: var(--blackColor);
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.5rem 1rem;
+                    background: var(--PrimaryColor);
+                    color: var(--whiteColor);
+                    border: none;
+                    border-radius: var(--borderRadius);
+                    font-weight: 600;
+                    transition: background var(--transitionDuration) ease;
+
+                    &:hover {
+                        background: var(--SecondaryColor);
+                    }
+
+                    .icon {
+                        margin-left: 0.5rem;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

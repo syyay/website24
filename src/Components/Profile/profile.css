@@ -1,0 +1,317 @@
+:root {
+    --PrimaryColor: hsl(26, 93%, 50%);
+    --HoverColor: hsl(26, 90%, 42%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyBg: hsl(0, 0%, 96%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+  }
+  
+  
+  .profil-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #adadad8f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .profil-container2 {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px ;
+    max-width: 98%;
+  }
+  
+  
+  .profil-header {
+    color: var(--PrimaryColor);
+    padding: 13px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+  
+  
+  .profil-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  
+  .profil-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .profil-section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .profil-section, .profil-section-misi {
+    width: 45%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .profil-section {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  .profil-section-misi {
+    width: 60%;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .profil-section:hover, .profil-section-misi:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profil-section, .profil-section-misi {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .profil-section-misi{
+    line-height: 1.2;
+  }
+  
+  
+  .profil-section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  
+  .profil-section-visi {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  .profil-section-text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  
+  
+  .profil-header-tujuan {
+    color: var(--PrimaryColor);
+    padding: 13px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+  
+  .profil-tujuan {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profil-tujuan:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .profil-footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  
+  }
+  
+  .profil-footer-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin: 20px;
+  }
+  
+  .profil-footer-content-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .profil-footer-content-text {
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: center;
+    color: black;
+  }
+  
+  .profil-header-sambutan {
+    color: var(--PrimaryColor);
+    padding: 13px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    padding-bottom: -100px;
+  }
+  
+  .profil-footer-title2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -100%;
+  }
+  
+  .profil-sambutan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 45px;
+    background-color: #f7f7f7;
+    border: 1px solid #dddddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profil-sambutan .profil-footer-content {
+    width: 65%;
+    margin: 20px;
+  }
+  
+  .profil-sambutan:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  } 
+  
+  .profil-sambutan .foto {
+    width: 20%;
+    margin: 20px;
+  }
+  
+  .foto {
+    position: relative;
+  }
+  
+  .foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .profil-sambutan .foto-caption {
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: var(--PrimaryColor);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 10px;
+  }
+  
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .profil-container {
+      padding-top: 15%;
+    }
+  
+    .profil-container2 {
+      padding: 10px;
+    }
+  
+    .profil-content {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .profil-section-wrapper {
+      flex-direction: column;
+    }
+  
+    .profil-section, .profil-section-misi {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .profil-sambutan {
+      flex-direction: column;
+      margin: 15px;
+    }
+  
+    .profil-sambutan .foto {
+      width: 100%;
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    .profil-sambutan .profil-footer-content {
+      width: 100%;
+      margin: 1px 0;
+    }
+  
+    .foto-caption {
+      font-size: 12px;
+      padding: 5px;
+      margin: 5px;
+      left: 5px;
+      width: 90%;
+      text-align: center;
+    }
+  
+}

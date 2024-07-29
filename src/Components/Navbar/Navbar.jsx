@@ -44,25 +44,56 @@ const Navbar = () => {
                     <ul className='navLists flex'>
 
                         <li className="navItem">
-                            <a href="" className="navLink">Home</a>
+                            <a href="/home" className="navLink">Home</a>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Profil</a>
+
+                        <li className="navItem dropdown">
+                            <a href="/profil" className="navLink dropbtn">Profil</a>
+                            <div className="dropdown-content">
+                                <a href="/profile">Visi Misi</a>
+                            </div>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Kesiswaan</a>
+
+                        <li className="navItem dropdown">
+                            <a href="/ekskul" className="navLink dropbtn">Kesiswaan</a>
+                            <div className="dropdown-content">
+                                <a href="/prestasinav">Prestasi Peserta Didik</a>
+                                <a href="/ekskul">Ekstrakurikuler</a>
+                                <a href="#daftar-siswa">Daftar Siswa</a>
+                            </div>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Sarpras</a>
+
+                        <li className="navItem dropdown">
+                            <a href="/sapras" className="navLink dropbtn">Sarpras</a>
+                            <div className="dropdown-content">
+                                <a href="#fasilitas">Fasilitas</a>
+                                <a href="/sapras">Ruang Praktik</a>
+                            </div>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Hubin</a>
+
+                        <li className="navItem dropdown">
+                            <a href="#" className="navLink dropbtn">Hubin</a>
+                            <div className="dropdown-content">
+                                <a href="#kemitraan">Kemitraan</a>
+                                <a href="#penelusuran-tamatan">Penelusuran Tamatan</a>
+                                <a href="#lulus-ptn">Lulus PTN</a>
+                            </div>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Kurikulum</a>
+
+                        <li className="navItem dropdown">
+                            <a href="#" className="navLink dropbtn">Kurikulum</a>
+                            <div className="dropdown-content">
+                                <a href="#kejuruan">Kejuruan</a>
+                                <a href="#daftar-guru">Daftar Guru</a>
+                            </div>
                         </li>
-                        <li className="navItem">
-                            <a href="#" className="navLink">Info</a>
+
+                        <li className="navItem dropdown">
+                            <a href="#" className="navLink dropbtn">Info</a>
+                            <div className="dropdown-content">
+                                <a href="#kegiatan">Kegiatan</a>
+                                <a href="#doegram">Doegram</a>
+                            </div>
                         </li>
 
                         <div className="headerBtns flex">

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  @apply relative w-72 cursor-pointer rounded-md h-48 text-center px-3 py-7 self-end duration-700 delay-100;
+  border-bottom-width: 4px; /* Only bottom border */
+}
+
+.card-active {
+  @apply h-96;
+}
+
+.logo {
+  @apply text-5xl mt-2 max-w-[5rem] mx-auto min-w-[5rem] min-h-[5rem] rounded-full text-yellow-600 grid place-items-center;
+}
+
+.para {
+  @apply mt-3;
+  font-size: 16px;
+}
+
+.baca-selengkapnya {
+  @apply border-2 border-gray-200 text-white py-2 px-4 rounded-full mt-4 mx-auto;
+}
+
+.card-active .baca-selengkapnya {
+  @apply delay-700 duration-300;
+}
+
+.card-active .logo {
+  @apply text-yellow-200;
+}
+
+img {
+  @apply transition transform hover:scale-105 duration-300;
+}

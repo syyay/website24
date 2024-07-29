@@ -47,59 +47,53 @@ const Data = [
 
 const Prestasi = () => {
     return (
-        <section className='prestasi section container'>
-            <div className="secContainer">
+        <section className='prestasi24 section container'>
+            <div className="secContainerPres">
 
-                <div className="secHeader flex">
-                    <div className="textDiv">
-                        <h2 className="secTitle">
+                <div className="secHeaderPres flexPrestasi24">
+                    <div className="textDivPres">
+                        <h2 className="secTitlePres">
                             Prestasi Peserta Didik
                         </h2>
-                        <p>
+                        <p className='prestasi24p'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laboriosam
                         </p>
                     </div>
 
-                    <div className="iconsDiv flex">
-                        <BsArrowLeftShort className="icon leftIcon"/>
-                        <BsArrowRightShort className="icon"/>
+                    <div className="iconsDivPres flexPrestasi24">
+                        <BsArrowLeftShort className="iconPres leftIconPres"/>
+                        <BsArrowRightShort className="iconPres"/>
                     </div>
                 </div>
 
-                <div className="mainContent grid">
+                <div className="mainContentPres grid">
                     {
                         Data.map(({id, imgSrc, presTitle, presDesc, date})=>{
                             return(
                                 <div className="singlePrestasi">
-                                    <div className="presImage">
-                                        <img src={imgSrc} alt="Image title" />
+                                    <div className="presImage24">
+                                        <img src={imgSrc} alt="Image title" className='prestasi24img' />
 
-                                        <div className="overlayInfo">
-                                            <h3>{presTitle}</h3>
-                                            <p>
+                                        <div className="overlayInfoPres">
+                                            <h3 className='prestasih3'>{presTitle}</h3>
+                                            <p className='prestasi24p'>
                                                 {presDesc}
                                             </p>
 
-                                            <BsArrowRightShort className="icon"/>
+                                            <BsArrowRightShort className="iconPres"/>
                                         </div>
 
                                     </div>
 
                                     <div className="presFooter">
-                                        <div className="number">
+                                        <div className="numberPres">
                                             0{id}
                                         </div>
 
-                                        <div className="presText flex">
-                                            <h6>
+                                        <div className="presText flexPrestasi24">
+                                            <h6 className='perstasi24h6'>
                                                 {date}
                                             </h6>
-                                            <span className='flex'>
-                                                <span className="dot">
-                                                    <BsDot className="icon"/>
-                                                </span>
-                                                Dot
-                                            </span>
                                         </div>
                                     </div>
                                 </div>
