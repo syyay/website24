@@ -11,6 +11,7 @@ import { BrowserRouter,Routes,Route, Outlet } from 'react-router-dom'
 import Login from './Components/DashboardAdmin/Login/Login'
 import DaftarSiswa from './Components/DashboardAdmin/DaftarSiswa/DaftarSiswa.jsx'
 import Walas from './Components/DashboardAdmin/Walas/Walas.jsx'
+import Kelas from './Components/DashboardAdmin/Kelas/Kelas.jsx'
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
                 <Route path='/dashboard' element={<Dashboard/>}>
                     <Route path='daftarsiswa' element={<DaftarSiswa/>}/>
                     <Route path='walas' element={<Walas/>}/>
+                    <Route path='kelas' element={<Kelas/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
